@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
+    body {
+      margin: 0;
+    }
+    .container {
+      background-color: black;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .titles {
+      text-align: justify;
+      position: relative;
+      color: #e2b33b;
+      font-size: 2.5rem;
+      width: 500px;
+      height: 1000px;
+      margin: 0 auto;
+      font-family: "news cycle";
+      transform: perspective(300px) rotateX(25deg);
+    }
+    .titles > div {
+      position: absolute;
+      top: 80%;
+      animation: crawl 20s linear 5s;
+    }
+    @keyframes crawl {
+      0% {
+        top: 80%;
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        top: -130%;
+      }
+    }
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      height: 200px;
+      width: 200px;
+      opacity: 0;
+      animation: zoomout 5s linear;
+    }
+    @keyframes zoomout {
+      0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(250%);
+      }
+      80% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(10%);
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <img src="starwars.svg" alt="" srcset="" />
+      <div class="titles">
+        <div>
+          <p>
+            It is a period of civil war. Rebel spaceships, striking from a
+            hidden base, have won their first victory against the evil Galactic
+            Empire.
+          </p>
+          <p>
+            During the battle, Rebel spies managed to steal secret plans to the
+            Empire’s ultimate weapon, the DEATH STAR, and space station with
+            enough power to destroy an entire planet.
+          </p>
+          <p>
+            Pursued by the Empire’s sinister agents, Princess Leia races home
+            aboard her starship, custodian of the stolen plans that can save her
+            people and restore freedom to the galaxy….
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
